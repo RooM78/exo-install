@@ -13,20 +13,47 @@
          */
 
 
-        class HomeController {
+        class HomeController
+        {
             /**
-             * @Route("/test2", name="home")
+             * @Route("/", name="home")
              *
              * je cree une route dans un commentaire que php va exécuter( c'est donc une annotation)
              * je sais que c'est une annotation car il y a une classe avec un @ devant.
              * j'associe une url a ma route et je lui associe aussi une methode de controleur(en plaçant mon annotation
-             * de la méthode). la méthode du controleur
+             * de la méthode). La méthode du contrôle sera donc exécutée
+             * quand l'url sera demandé dans un navigateur
              */
-            public function home(){
+            public function home()
+            {
 
-                var_dump('hello home');die;
+                var_dump('Bienvenue sur la page d\'acceuil');
+                die;
+            }
+
+            /**
+             * @Route("/article", name = "article")
+             *
+             */
+
+            public function article()
+            {
+
+                var_dump("Bienvenue sur la page article");
+                die;
             }
 
 
+            /**
+             * @Route("/contact", name = "contact")
+             */
+
+            public function contact()
+            {
+
+                var_dump("Bienvenue sur la page contact");
+                die;
+
+            }
         }
 
